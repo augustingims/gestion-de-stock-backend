@@ -1,0 +1,30 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionstock?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: Kema1703
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    database: MYSQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    properties:
+      session_factory:
+        interceptor: com.teamdevtech.gestiondestock.interceptor.Interceptor
+
+
+server:
+  port: 8081
+
+
+flickr:
+  apiKey: 5dd49a7aab755d3aa013a9e863fd177b
+  apiSecret: 91dc7cfdd92c94ab
+  appKey: 72157720835275696-3471448c8c6a86a7
+  appSecret: dceee2520dcde58f
